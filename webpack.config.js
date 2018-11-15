@@ -46,6 +46,8 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
+
+    .enableReactPreset()
 ;
 
 module.exports = Encore.getWebpackConfig();
