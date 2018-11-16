@@ -19,9 +19,9 @@ export default class CloutExchangeApp extends Component {
 
 	render() {
 		return (
-			<CloutExchange
+			<CloutExchange/*
 				{...this.props}
-				{...this.state}
+				{...this.state}*/
 			/>
 		)
 	}

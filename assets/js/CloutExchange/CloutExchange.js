@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function CloutExchange(props) {
-	const { } = props;
+export default function CloutExchange(/*props*/) {
+	/*const { } = props;*/
 
 	return (
 		<div>
-	        <h2>Welcome to clout.exchange!</h2>
+	        <h3>Welcome to clout.exchange!</h3>
     	</div>
 	);
 }
 
-RepLogs.propTypes = {
+CloutExchange.propTypes = {
 };
