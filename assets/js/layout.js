@@ -2,9 +2,10 @@
 
 import $ from 'jquery';
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.css';
-import '../css/main.css';
+import 'bootstrap/scss/bootstrap.scss'; 
+import 'font-awesome/scss/font-awesome.scss';
+import 'simple-line-icons/scss/simple-line-icons.scss';
+import '../scss/main.scss';
 import 'whatwg-fetch';
 import 'promise-polyfill/src/polyfill';
 
