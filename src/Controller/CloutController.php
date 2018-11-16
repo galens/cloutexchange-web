@@ -13,4 +13,12 @@ class CloutController extends BaseController
     {
         return $this->render('clout/index.html.twig');
     }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function getAboutPage()
+    {
+        return $this->render('clout/about.html.twig');
+    }
 }
