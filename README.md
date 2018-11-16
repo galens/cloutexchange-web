@@ -33,4 +33,4 @@ yarn run encore dev --watch
 php bin/console server:run
 ```
 
-Now check out the site at `http://localhost:8000`
+Visit site at `http://localhost:8000`
