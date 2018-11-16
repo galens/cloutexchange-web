@@ -60,7 +60,7 @@ Encore
     })
 
     // copies to {output}/static
-    .copyFiles({ from: './assets/static', to: 'static/[name].[ext]' })
+    .copyFiles({ from: './assets/static', to: 'static/[hash:8].[name].[ext]' })
 ;
 
 module.exports = Encore.getWebpackConfig();
