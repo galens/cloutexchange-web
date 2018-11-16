@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>More clout related stuff here</h3>
+    </div>
+    <div id="clout-exchange-app"></div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <!-- add page specific stylesheets here -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/cloutexchange_react_app.js') }}"></script>
+{% endblock %}
