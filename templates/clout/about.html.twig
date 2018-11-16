@@ -1,5 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<h3>clout.exchange is the first social media stock exchange. Invest in your favorite stars, earn points, win prizes.</h3>
+	<div class="container">
+    	<div class="row">
+			<div class="col-xl-9 mx-auto">
+				<h1 class="mb-3">The First Social Media Stock Exchange</h1>
+				<h3 class="mb-3">Invest in your favorite stars. Earn points. Win prizes.</h3>
+			</div>
+			<div id="stage" class="mt-3 col-md-10 col-lg-8 col-xl-7 mx-auto">
+				<span>
+					<img src="{{ asset('build/static/TYGA.png') }}" alt="TYGA">
+				</span>
+				<span>
+					<img src="{{ asset('build/static/LVLY.png') }}" alt="LVLY">
+				</span>
+				<span>
+					<img src="{{ asset('build/static/ARIG.png') }}" alt="ARIG">
+				</span>
+				<span>
+					<img src="{{ asset('build/static/JBIEB.png') }}" alt="JBIEB">
+	          </span>
+	        </div>
+		</div>
+	</div>
 {% endblock %}

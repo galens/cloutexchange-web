@@ -48,6 +48,7 @@ Encore
     .autoProvidejQuery()
 
     .enableReactPreset()
+
     .configureBabel((babelConfig) => {
         if(Encore.isProduction()) {
             babelConfig.plugins.push(
@@ -57,6 +58,9 @@ Encore
 
         babelConfig.plugins.push('@babel/plugin-proposal-object-rest-spread');
     })
+
+    // copies to {output}/static
+    .copyFiles({ from: './assets/static', to: 'static/[name].[ext]' })
 ;
 
 module.exports = Encore.getWebpackConfig();
