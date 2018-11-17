@@ -13,8 +13,12 @@
     </head>
     <body>
     	{% include 'headerNav.html.twig' %}
-    	<!-- todo add navigation stuff thats on all pages here -->
-        {% block body %}{% endblock %}
+    	<section class="call-to-action text-white text-center">
+            <div class="overlay"></div>
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </section>
         {% block javascripts %}
         	<script src="{{ asset('build/runtime.js') }}"></script>
         	<script src="{{ asset('build/layout.js') }}"></script>

@@ -1,76 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<section class="call-to-action text-white text-center">
-		<div class="container">
-	    	<div class="row">
-				<div class="col-xl-9 mx-auto">
-					<h1 class="mb-3">The First Social Media Stock Exchange</h1>
-					<h3 class="mb-3">Invest in your favorite stars. Earn points. Win prizes.</h3>
-				</div>
-				<div id="stage" class="mt-3 col-md-10 col-lg-8 col-xl-7 mx-auto">
-					<span>
-						<img src="{{ asset('build/static/TYGA.png') }}" alt="TYGA">
-					</span>
-					<span>
-						<img src="{{ asset('build/static/LVLY.png') }}" alt="LVLY">
-					</span>
-					<span>
-						<img src="{{ asset('build/static/ARIG.png') }}" alt="ARIG">
-					</span>
-					<span>
-						<img src="{{ asset('build/static/JBIEB.png') }}" alt="JBIEB">
-		          </span>
-		        </div>
-			</div>
-		</div>
-		<div class="ticker-wrap">
-        <div class="ticker">
-          <div class="ticker__item ticker__up">
-            <b>DRAKE</b> <i class="fa fa-caret-up"></i> 
-            $112 <sub>+2%</sub>
-          </div>
-          <div class="ticker__item ticker__down">
-            <b>50CNT</b> <i class="fa fa-caret-down"></i> 
-            $88 <sub>-2%</sub>
-          </div>
-          <div class="ticker__item ticker__up">
-            <b>KIMK</b> <i class="fa fa-caret-up"></i> 
-            $15<sub>+7%</sub>
-          </div>
-          <div class="ticker__item ticker__up">
-            <b>TSWFT</b> <i class="fa fa-caret-up"></i> 
-            $99<sub>+4%</sub>
-          </div>
-          <div class="ticker__item ticker__down">
-            <b>KATYP</b> <i class="fa fa-caret-down"></i> 
-            $50 <sub>-2%</sub>
-          </div>
-          <div class="ticker__item ticker__up">
-            <b>LLPMP</b><i class="fa fa-caret-up"></i>
-            $52 <sub>+2%</sub>
-          </div>
-          <div class="ticker__item ticker__down">
-            <b>BRDPT</b> <i class="fa fa-caret-down"></i> 
-            $100<sub>-2%</sub>
-          </div>
-          <div class="ticker__item ticker__up">
-            <b>ICET</b> <i class="fa fa-caret-up"></i> 
-            $152 <sub>+2%</sub>
-          </div>
-          <div class="ticker__item ticker__down">
-            <b>BADBB</b> <i class="fa fa-caret-down"></i> 
-            $16 <sub>-5%</sub>
-          </div>
-          <div class="ticker__item ticker__down">
-            <b>EMNEM</b> <i class="fa fa-caret-down"></i> 
-            $22 <sub>-1%</sub>
-          </div>
-          <div class="ticker__item ticker__up">
-            <b>6X9NE</b> <i class="fa fa-caret-up"></i> 
-            $45 <sub>+3%</sub>
-          </div>
-        </div>
-      </div>
-	</section>
+  <div class="row">
+  	<div class="col-xl-9 mx-auto">
+  		<h1 class="mb-3">The First Social Media Stock Exchange</h1>
+  		<h3 class="mb-3">Invest in your favorite stars. Earn points. Win prizes.</h3>
+  	</div>
+  	<div id="stage" class="mt-3 col-md-10 col-lg-8 col-xl-7 mx-auto">
+  		<span>
+  			<img src="{{ asset('build/static/TYGA.png') }}" alt="TYGA">
+  		</span>
+  		<span>
+  			<img src="{{ asset('build/static/LVLY.png') }}" alt="LVLY">
+  		</span>
+  		<span>
+  			<img src="{{ asset('build/static/ARIG.png') }}" alt="ARIG">
+  		</span>
+  		<span>
+  			<img src="{{ asset('build/static/JBIEB.png') }}" alt="JBIEB">
+      </span>
+    </div>
+  </div>
+  {% include 'ticker.html.twig' %}
 {% endblock %}

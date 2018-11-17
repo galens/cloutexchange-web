@@ -1,10 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div>
-        <h3>More clout related stuff here</h3>
-    </div>
-    <div id="clout-exchange-app"></div>
+	<div class="row">
+		<div class="col-xl-9 mx-auto">
+			<h1 class="mb-3">The First Social Media Stock Exchange</h1>
+			<h3 class="mb-3">Invest in your favorite stars. Earn points. Win prizes.</h3>
+			<div id="clout-exchange-app"></div>
+		</div>
+	</div>
+	{% include 'ticker.html.twig' %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -15,5 +19,10 @@
 
 {% block javascripts %}
     {{ parent() }}
+
+    <script>
+        window.CLOUT_CELEB_APP_PROPS = {{ cloutCelebAppProps|json_encode|raw }};
+    </script>
+
     <script src="{{ asset('build/cloutexchange_react_app.js') }}"></script>
 {% endblock %}

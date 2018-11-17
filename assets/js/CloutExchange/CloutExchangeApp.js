@@ -19,16 +19,18 @@ export default class CloutExchangeApp extends Component {
 
 	render() {
 		return (
-			<CloutExchange/*
+			<CloutExchange
 				{...this.props}
-				{...this.state}*/
+				{...this.state}
 			/>
 		)
 	}
 }
 
 CloutExchangeApp.propTypes = {
+	celebData: PropTypes.array,
 };
 
 CloutExchangeApp.defaultProps = {
+	celebData: []
 };
