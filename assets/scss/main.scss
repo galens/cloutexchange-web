@@ -141,8 +141,11 @@ footer.footer {
 
 .celebData {
   display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position:relative;
-  left:100px;
+  text-align:left;
+  font-size: 18px;
 }
 
 
