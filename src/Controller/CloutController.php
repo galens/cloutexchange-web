@@ -38,6 +38,26 @@ class CloutController extends BaseController
             "timespan" => '7 days'
         ];
 
+        $cloutCelebAppProps['celebData'][] = [
+            "id" => 3,
+            "name" => "Lovely The Band",
+            "symbol" => "LVLY",
+            "current_price" => 1.83,
+            "price_diff" => 0.20,
+            "percent_diff" => 11,
+            "timespan" => '7 days'
+        ];
+
+        $cloutCelebAppProps['celebData'][] = [
+            "id" => 4,
+            "name" => "Ariana Grande",
+            "symbol" => "ARIG",
+            "current_price" => 580.25,
+            "price_diff" => 2.21,
+            "percent_diff" => 4,
+            "timespan" => '7 days'
+        ];
+
         return $this->render('clout/index.html.twig', array (
             'cloutCelebAppProps' => $cloutCelebAppProps,
         ));

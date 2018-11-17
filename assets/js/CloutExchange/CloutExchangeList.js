@@ -13,7 +13,7 @@ export default class CloutExchangeList extends Component {
 		const { celebData } = this.props;
 
 		return (
-			<div>
+			<div className="celebData">
 				{celebData.map(celeb => {
 	            	return <div key={celeb.id}>
 	            			Name: {celeb.name}<br />
