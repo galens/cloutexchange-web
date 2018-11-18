@@ -28,6 +28,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@babel/core": "^7.1.6"
+        "@babel/core": "^7.1.6",
+        "chart.js": "^1.1.1",
+        "react-chartjs": "^1.2.0"
     }
 }

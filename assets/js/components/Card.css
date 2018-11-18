@@ -1,0 +1,54 @@
+.price-card-container {
+  border-radius: 5px;
+  background: linear-gradient(to left top, teal, lightgreen);
+  width: 300px;
+  height: 150px;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.price-card {
+  background: #FFF;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  padding: 10px 20px;
+  position: relative;
+  text-align: right;
+}
+
+h5.price-card-title {
+  color: #00908c;
+  font-size: 15px;
+}
+
+.price-card-left, .price-card-right {
+  display: inline-block;
+}
+
+.price-card-left {
+  right: 10px;
+  margin: 0px;
+  position: relative;
+}
+
+.price-card-right {
+  width: 165px;
+}
+
+.price-card-avatar {
+  background: url(https://pbs.twimg.com/profile_images/1057398474797342720/sDc2UOOz_400x400.jpg);
+  width: 80px;
+  height: 80px;
+  background-size: contain !important;
+  display: inline-block;
+}
+h3.price-card-stock-price,
+h5.price-card-stock-difference {
+  margin: 0px;
+}
+h5.price-card-stock-difference {
+  font-size: 15px;
+  color: limegreen;
+}

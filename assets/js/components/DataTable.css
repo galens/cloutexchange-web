@@ -1,0 +1,16 @@
+table.price-data-table {
+  background: #333;
+  width: 100%;
+}
+
+table.price-data-table thead th {
+  color: #888;
+  font-weight: 100;
+  padding: 5px;
+}
+
+table.price-data-table tbody td {
+  color: #bbb;
+  padding: 5px;
+  border-bottom: 2px solid #252525;
+}
