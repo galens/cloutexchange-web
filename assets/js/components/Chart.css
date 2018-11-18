@@ -1,0 +1,71 @@
+.price-chart {
+  border-radius: 5px;
+  background: linear-gradient(to left top, teal, lightgreen);
+  width: 620px;
+  height: 350px;
+  padding: 15px;
+}
+
+.price-chart-container {
+  background: #FFF;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 15px;
+}
+.price-chart-top {
+  display: flex;
+}
+.price-chart-profile {
+    width: 50%;
+    height: 40%;
+    position: relative;
+    display: inline-block;
+}
+
+.price-chart-avatar {
+  background: url(https://pbs.twimg.com/profile_images/1057398474797342720/sDc2UOOz_400x400.jpg);
+  width: 100px;
+  height: 100px;
+  background-size: contain !important;
+  display: inline-block;
+}
+
+.price-chart-info {
+  display: inline-block;
+  position: absolute;
+  margin: 20px 10px;
+}
+
+h2.price-chart-ticker {
+  color: #000;
+  margin: 0px;
+  font-weight: normal;
+}
+h4.price-chart-name {
+  color: #666;
+  margin: 0px;
+  font-size: 17px;
+}
+.price-chart-price-container {
+  color: #000;
+  text-align: center;
+  width: 50%;
+  margin: 15px 0px;
+}
+h1.price-chart-price,
+h5.price-chart-price-diff {
+  margin: 0;
+}
+
+h5.price-chart-price-diff {
+  font-size: 16px;
+  bottom: 5px;
+  position: relative;
+}
+.price-diff-positive {
+  color: limegreen;
+}
+.price-chart-linedata {
+  width: 100%;
+}
