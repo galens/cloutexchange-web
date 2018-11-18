@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import "./Chart.css"
-import { Line } from "react-chartjs"
+import React, { Component } from 'react';
+import { Line } from 'react-chartjs';
+import PropTypes from 'prop-types';
 
 const chartData = {
   labels: ["1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00",],
@@ -18,17 +18,37 @@ const chartData = {
   ]
 }
 
-export class FollowerChart extends Component {
+export default class FollowerChart extends Component {
   constructor ( props ) {
-    super()
-    this.state = { ...props }
+    super(props);
+
+    this.returnSignAndAmountLine = this.returnSignAndAmountLine.bind(this);
   }
 
-  // toggleActive ( name ) {
-  //   document.getElementById( name ).classList.toggle( "active" )
-  // }
+  returnSignAndAmountLine(celeb) {
+    var classTag = '';
+    var sign = '';
+
+    if(celeb.price_diff > 0) {
+      classTag = 'price-chart-price-diff price-diff-positive';
+      sign = '+';
+    } else {
+      classTag = 'price-chart-price-diff price-diff-negative';
+    }
+
+    return <h5 className={classTag}>{sign}{celeb.price_diff}</h5>
+  }
+
+  /*
+  toggleActive ( name ) {
+    document.getElementById( name ).classList.toggle( "active" )
+  }
+  */
   
-  render (){
+  render () {
+    const { celeb } = this.props;
+
+    
     return (
       <div className="price-chart">
         <div className="price-chart-container">
@@ -36,13 +56,13 @@ export class FollowerChart extends Component {
           <div className="price-chart-profile">
             <div className="price-chart-avatar"></div>
             <div className="price-chart-info">
-              <h2 className="price-chart-ticker">JBIEB</h2>
-              <h4 className="price-chart-name">Justin Bieber</h4>
+              <h2 className="price-chart-ticker">{celeb.symbol}</h2>
+              <h4 className="price-chart-name">{celeb.name}</h4>
             </div>
           </div>
           <div className="price-chart-price-container">
-            <h1 className="price-chart-price">$2070.07</h1>
-            <h5 className="price-chart-price-diff price-diff-positive">+$1.21</h5>
+            <h1 className="price-chart-price">${celeb.current_price}</h1>
+            {this.returnSignAndAmountLine(celeb)}
           </div>
           </div>
           <div className="price-chart-linedata">
@@ -54,4 +74,6 @@ export class FollowerChart extends Component {
   }
 }
 
-export default FollowerChart
+FollowerChart.propTypes = {
+  celeb: PropTypes.object.isRequired
+}

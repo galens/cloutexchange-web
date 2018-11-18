@@ -1,10 +1,10 @@
-import React from "react";
-import { render } from "react-dom";
-import CloutExchangeApp from "./Home/Home";
+import React from 'react';
+import { render } from 'react-dom';
+import Home from './Home/Home';
 
 render(
-	<CloutExchangeApp 
+	<Home 
 		{...window.CLOUT_CELEB_APP_PROPS}
 	/>,
-	document.getElementById("clout-exchange-app")
+	document.getElementById('clout-exchange-app')
 );

@@ -1,19 +1,18 @@
-import React, { Component } from "react"
-import "./Chart.css"
-import { Line } from "react-chartjs"
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export class Card extends Component {
+export default class Card extends Component {
   constructor ( props ) {
-    super()
-    this.state = { ...props }
+    super(props);
   }
 
   // toggleActive ( name ) {
   //   document.getElementById( name ).classList.toggle( "active" )
   // }
   
-  render (){
-    console.log( this.state )
+  render () {
+    const { celeb } = this.props;
+
     return (
       <div className="price-card-container">
         <div className="price-card">
@@ -23,9 +22,9 @@ export class Card extends Component {
           <div className="price-card-right">
             <div className="price-card-data">
               <h5 className="price-card-title">Biggest % Gain</h5>
-              <div className="price-card-stock-name">{ this.state.celeb.name } ({ this.state.celeb.symbol })</div>
-              <h3 className="price-card-stock-price">${ this.state.celeb.current_price }</h3>
-              <h5 className="price-card-stock-difference">{ this.state.celeb.price_diff }%</h5>
+              <div className="price-card-stock-name">{ celeb.name } ({ celeb.symbol })</div>
+              <h3 className="price-card-stock-price">${ celeb.current_price }</h3>
+              <h5 className="price-card-stock-difference">{ celeb.price_diff }%</h5>
             </div>
           </div>
         </div>
@@ -34,4 +33,6 @@ export class Card extends Component {
   }
 }
 
-export default Card
+Card.propTypes = {
+  celeb: PropTypes.object.isRequired
+}

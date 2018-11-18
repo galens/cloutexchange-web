@@ -4,8 +4,7 @@ module.exports = {
         ecmaVersion: 6,
         sourceType: 'module',
         ecmaFeatures: {
-            jsx: true,
-            experimentalObjectRestSpread: true
+            jsx: true
         }
     },
     env: {
@@ -16,5 +15,12 @@ module.exports = {
     rules: {
         "no-console": 0,
         "no-unused-vars": 0
+    },
+        settings: {
+        react: {
+          createClass: 'createReactClass',
+          pragma: 'React', 
+          version: require('react/package.json').version,
+        }
     }
 };
