@@ -16,10 +16,13 @@ export default class Home extends Component {
 
   render() {
     const {  celebData } = this.props;
+    const rand = Math.floor(Math.random()*(celebData.length));
+    console.log(rand);
+
     return (
       <div>
         <div>
-          <FollowerChart celeb={celebData[1]} />
+          <FollowerChart celeb={celebData[rand]} />
         </div>
           <div className="flex">
             <Card celeb={celebData[0]} />
