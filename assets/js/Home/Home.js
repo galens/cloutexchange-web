@@ -9,20 +9,27 @@ export default class Home extends Component {
     super(props);
 
     // set initial state variables here
-    /*this.state = {
+    this.state = {
+      highlightedRowId: null,
+      topCardId: Math.floor(Math.random()*(4))
+    }
 
-    }*/
+    this.handleRowClick = this.handleRowClick.bind(this);
+  }
+
+  handleRowClick(celebId) {
+    this.setState({highlightedRowId: celebId}); // highlight row in FollowerChart
+    this.setState({topCardId: celebId-1}); // update top card to be id from selected row
   }
 
   render() {
     const {  celebData } = this.props;
-    const rand = Math.floor(Math.random()*(celebData.length));
-    console.log(rand);
+    const {  topCardId } = this.state;
 
     return (
       <div>
         <div>
-          <FollowerChart celeb={celebData[rand]} />
+          <FollowerChart celeb={celebData[topCardId]} />
         </div>
           <div className="flex">
             <Card celeb={celebData[0]} />
@@ -30,7 +37,12 @@ export default class Home extends Component {
             <Card celeb={celebData[2]} />
           </div>
           <div>
-            <DataTable celebData={ celebData } />
+            <DataTable 
+              {...this.props}
+              {...this.state}
+              celebData={celebData} 
+              onRowClick={this.handleRowClick}
+            />
           </div>
       </div>
     );

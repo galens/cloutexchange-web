@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 export default class DataTable extends Component {
 	constructor(props) {
 		super(props)
-		this.state = {};
 	}
 
 	render() {
-		const { celebData } = this.props;
+		const { celebData, highlightedRowId, onRowClick } = this.props;
 
 		return (
 			<div className="celebData">
@@ -24,7 +23,11 @@ export default class DataTable extends Component {
           </thead>
           <tbody>
           { celebData.map(celeb => { return (
-            <tr key={ celeb.id }>
+            <tr 
+              key={ celeb.id }
+              className={highlightedRowId === celeb.id ? 'highlighted' : ''}
+              onClick={() => onRowClick(celeb.id)}
+            >
               <td>{ celeb.symbol }</td>
               <td>{ celeb.name }</td>
               <td>{ celeb.current_price }</td>
@@ -40,5 +43,7 @@ export default class DataTable extends Component {
 }
 
 DataTable.propTypes = {
-	celebData: PropTypes.array.isRequired
+  highlightedRowId: PropTypes.any,
+	celebData: PropTypes.array.isRequired,
+  onRowClick: PropTypes.func.isRequired
 };
