@@ -21,7 +21,7 @@ export default class Home extends Component {
         <div>
           <FollowerChart celeb={celebData[1]} />
         </div>
-          <div>
+          <div className="flex">
             <Card celeb={celebData[0]} />
             <Card celeb={celebData[1]} />
             <Card celeb={celebData[2]} />

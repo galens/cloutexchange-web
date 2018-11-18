@@ -52,3 +52,9 @@ h5.price-card-stock-difference {
   font-size: 15px;
   color: limegreen;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
