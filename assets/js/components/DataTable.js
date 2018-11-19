@@ -30,8 +30,8 @@ export default class DataTable extends Component {
             >
               <td>{ celeb.symbol }</td>
               <td>{ celeb.name }</td>
-              <td>{ celeb.current_price }</td>
-              <td>{ celeb.price_diff }</td>
+              <td>{ celeb.current_price.toFixed(2) }</td>
+              <td>{ celeb.price_diff.toFixed(2) }</td>
               <td>{ celeb.percent_diff }</td>
             </tr>
           )}) }

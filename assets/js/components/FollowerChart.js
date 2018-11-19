@@ -2,27 +2,12 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs';
 import PropTypes from 'prop-types';
 
-const chartData = {
-  labels: ["1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/1 0:00","1/1 6:00","1/1 12:00","1/1 18:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00","1/2 0:00",],
-  datasets: [
-    {
-      label: "Price Chart",
-      fillColor: "rgba(151,187,205,0.2)",
-      strokeColor: "rgba(151,187,205,1)",
-      pointColor: "rgba(151,187,205,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [2234,2264,2239,2243,2250,2252,2261,2261,2260,2261,2263,2264,2284,2267,2295,2278,2316,2293,2274,2278,2270,2281,2271,2273,2283,2289,2299,2273]
-    }
-  ]
-}
-
 export default class FollowerChart extends Component {
   constructor ( props ) {
     super(props);
 
     this.returnSignAndAmountLine = this.returnSignAndAmountLine.bind(this);
+    this.buildChartDataObject = this.buildChartDataObject.bind(this);
   }
 
   returnSignAndAmountLine(celeb) {
@@ -40,6 +25,28 @@ export default class FollowerChart extends Component {
     return <h5 className={classTag}>{priceout} (%{celeb.percent_diff})</h5>
   }
 
+  buildChartDataObject(celeb) {
+    // create copies of the arrays, otherwise array contents get modified
+    const copy_labels = celeb.labels.slice();
+    const copy_data   = celeb.data.slice();
+
+    return {
+      labels: copy_labels,
+      datasets: [
+        {
+          label: "Price Chart",
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data: copy_data
+        }
+      ]
+    }
+  }
+
   /*
   toggleActive ( name ) {
     document.getElementById( name ).classList.toggle( "active" )
@@ -48,7 +55,6 @@ export default class FollowerChart extends Component {
   
   render () {
     const { celeb } = this.props;
-
     
     return (
       <div className="price-chart">
@@ -67,7 +73,7 @@ export default class FollowerChart extends Component {
           </div>
           </div>
           <div className="price-chart-linedata">
-            <Line data={ chartData } width="560" height="200" />
+            <Line data={ this.buildChartDataObject(celeb) } width="560" height="200" />
           </div>
         </div>
       </div>

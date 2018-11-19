@@ -23,13 +23,15 @@ export default class Home extends Component {
   }
 
   render() {
-    const {  celebData } = this.props;
-    const {  topCardId } = this.state;
+    const { celebData } = this.props;
+    const { topCardId } = this.state;
 
     return (
       <div>
         <div>
-          <FollowerChart celeb={celebData[topCardId]} />
+          <FollowerChart 
+            celeb={celebData[topCardId]} 
+          />
         </div>
           <div className="flex">
             <Card celeb={celebData[0]} />
