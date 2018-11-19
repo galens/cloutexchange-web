@@ -27,16 +27,17 @@ export default class FollowerChart extends Component {
 
   returnSignAndAmountLine(celeb) {
     var classTag = '';
-    var sign = '';
+    var priceout = '';
 
     if(celeb.price_diff > 0) {
       classTag = 'price-chart-price-diff price-diff-positive';
-      sign = '+';
+      priceout = '+$' + celeb.price_diff.toFixed(2);
     } else {
       classTag = 'price-chart-price-diff price-diff-negative';
+      priceout = '-$' + Math.abs(celeb.price_diff.toFixed(2));
     }
 
-    return <h5 className={classTag}>{sign}{celeb.price_diff}</h5>
+    return <h5 className={classTag}>{priceout} (%{celeb.percent_diff})</h5>
   }
 
   /*
