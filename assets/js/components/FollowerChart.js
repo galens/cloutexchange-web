@@ -61,7 +61,7 @@ export default class FollowerChart extends Component {
         <div className="price-chart-container">
         <div className="price-chart-top">
           <div className="price-chart-profile">
-            <div className="price-chart-avatar"></div>
+            <div className={`price-chart-avatar ${celeb.symbol}-icon`}></div>
             <div className="price-chart-info">
               <h2 className="price-chart-ticker">{celeb.symbol}</h2>
               <h4 className="price-chart-name">{celeb.name}</h4>

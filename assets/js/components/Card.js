@@ -17,7 +17,7 @@ export default class Card extends Component {
       <div className="price-card-container">
         <div className="price-card">
           <div className="price-card-left">
-            <div className="price-card-avatar"></div>
+            <div className={`price-card-avatar ${celeb.symbol}-icon`}></div>
           </div>
           <div className="price-card-right">
             <div className="price-card-data">

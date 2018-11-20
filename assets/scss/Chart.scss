@@ -24,7 +24,7 @@
 }
 
 .price-chart-avatar {
-  background: url(https://pbs.twimg.com/profile_images/1057398474797342720/sDc2UOOz_400x400.jpg);
+  /*background: url(https://pbs.twimg.com/profile_images/1057398474797342720/sDc2UOOz_400x400.jpg);*/
   width: 100px;
   height: 100px;
   background-size: contain !important;
@@ -71,4 +71,20 @@ h5.price-chart-price-diff {
 }
 .price-chart-linedata {
   width: 100%;
+}
+
+.ARIG-icon {
+  background: url("../images/ARIG-icon.png");
+}
+
+.TYGA-icon {
+  background: url("../images/TYGA-icon.png");
+}
+
+.JBIEB-icon {
+  background: url("../images/JBIEB-icon.png");
+}
+
+.LVLY-icon {
+  background: url("../images/LVLY-icon.png");
 }
